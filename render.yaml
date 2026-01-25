@@ -5,7 +5,7 @@ services:
   env: docker
   autoDeploy: false
   disk:
-    name: mysql
+    name: mysql-data-v1  # 名前を具体的かつユニークにする（変えない限り固定される）
     mountPath: /var/lib/mysql
     sizeGB: 10
   envVars:
@@ -15,10 +15,10 @@ envVarGroups:
 - name: mysql
   envVars:
   - key: MYSQL_DATABASE
-    value: mysql
+    value: java_learning_db  # アプリが使っている名前に合わせる
   - key: MYSQL_USER
-    value: mysql
+    value: admin_user       # 固定する
   - key: MYSQL_PASSWORD
-    generateValue: true
+    value: "YourStrongPassword123" # 自動生成ではなく「固定」を推奨
   - key: MYSQL_ROOT_PASSWORD
-    generateValue: true
+    value: "YourRootPassword123"   # 固定する
