@@ -2,5 +2,8 @@
 # Needed for compatibility with existing SQL clients / WordPress.
 default-authentication-plugin=mysql_native_password
 
+# サーバー全体のタイムゾーンを日本時間に設定
+default-time-zone = '+09:00'
+
 # Listen on all interfaces
 bind-address=0.0.0.0
