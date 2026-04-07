@@ -9,7 +9,6 @@ COPY config/user.cnf /etc/mysql/my.cnf
 
 # 必要に応じて実行権限などを調整
 RUN chmod 644 /etc/mysql/my.cnf
-```
 
 ### 3. Spring Boot側：接続URLの再確認
 
